@@ -1,0 +1,16 @@
+<h1>Review <strong><% @restaurant.name %></strong> Restaurant</h1>
+
+<%= simple_form_for [@restaurant, @review] do |f| %>
+
+  <div class="form-inputs">
+    <%= f.input :rating %>
+    <%= f.input :content %>
+  </div>
+
+  <div class="form-actions btn btn-primary">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+
+<br>
+<%= link_to "Back to Restaurants", restaurants_path %>
